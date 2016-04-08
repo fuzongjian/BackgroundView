@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Fxw-Wx-o5r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="Ocg-HR-eMo">
+            <objects>
+                <navigationController id="Fxw-Wx-o5r" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kKy-a1-x28">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="ic7-th-Dda" kind="relationship" relationship="rootViewController" id="QFA-gS-dgI"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b1X-km-khd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="25" y="368"/>
+        </scene>
+        <!--背景视频播放-->
+        <scene sceneID="aSx-ki-4A9">
+            <objects>
+                <viewController id="ic7-th-Dda" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Iun-2v-A7Y"/>
+                        <viewControllerLayoutGuide type="bottom" id="nVD-V4-XIb"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="bYf-pR-NaX">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LdJ-5b-vyU">
+                                <rect key="frame" x="250" y="250" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="PYW-6G-VOb"/>
+                                    <constraint firstAttribute="width" constant="100" id="rdu-4Y-ZjU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="界面跳转"/>
+                                <connections>
+                                    <segue destination="B0l-23-8kX" kind="push" identifier="video" id="mLV-qs-PU6"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="LdJ-5b-vyU" firstAttribute="centerX" secondItem="bYf-pR-NaX" secondAttribute="centerX" id="NFF-tx-abX"/>
+                            <constraint firstItem="LdJ-5b-vyU" firstAttribute="centerY" secondItem="bYf-pR-NaX" secondAttribute="centerY" id="oxp-I5-uhT"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="背景视频播放" id="hbe-r5-QQU"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="214-dK-gl9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="803" y="216"/>
+        </scene>
+        <!--Background Video Controller-->
+        <scene sceneID="7wZ-DE-kiJ">
+            <objects>
+                <viewController id="B0l-23-8kX" customClass="BackgroundVideoController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="hDm-d9-fQE"/>
+                        <viewControllerLayoutGuide type="bottom" id="MPg-8r-52S"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="SBl-Ld-RhL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OYT-LC-haP">
+                                <rect key="frame" x="250" y="250" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="cXc-Rz-pW0"/>
+                                    <constraint firstAttribute="width" constant="100" id="zWi-H4-4P4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="返回"/>
+                                <connections>
+                                    <action selector="back:" destination="B0l-23-8kX" eventType="touchUpInside" id="Eth-M8-ilT"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="OYT-LC-haP" firstAttribute="centerX" secondItem="SBl-Ld-RhL" secondAttribute="centerX" id="aLd-Zs-B6B"/>
+                            <constraint firstItem="OYT-LC-haP" firstAttribute="centerY" secondItem="SBl-Ld-RhL" secondAttribute="centerY" id="u4I-Da-dzw"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="Hig-nB-Tab"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="l6R-Tx-LfE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1445" y="216"/>
+        </scene>
+    </scenes>
+</document>
